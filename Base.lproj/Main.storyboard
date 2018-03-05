@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleSDGothicNeo.ttc">
+            <string>AppleSDGothicNeo-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pronobo_the_real_shit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectangleAcceuil" translatesAutoresizingMaskIntoConstraints="NO" id="yC9-ri-c0c">
+                                <rect key="frame" x="3" y="198" width="314" height="111"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="fFe-3y-Qoa"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0mP-02-WZT" appends="YES" id="iau-y8-VJV"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yC9-ri-c0c" secondAttribute="bottom" constant="259" id="Mgi-1E-Ke0"/>
+                            <constraint firstItem="yC9-ri-c0c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YGz-9r-HI5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yC9-ri-c0c" secondAttribute="trailing" constant="3" id="m9H-mT-vok"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="swipeSurLogAGame" destination="0mP-02-WZT" id="voq-dl-6l3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="0mP-02-WZT">
+                    <connections>
+                        <segue destination="z05-vl-4Sb" kind="presentation" identifier="swipeSurBail" id="ST1-Br-Lk0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="81" y="69"/>
+        </scene>
+        <!--Log a game-->
+        <scene sceneID="NSN-gd-A6J">
+            <objects>
+                <viewController id="1tq-G4-0DR" customClass="VCLogAGame" customModule="Pronobo_the_real_shit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ScO-Nx-cb9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ficheJaune" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-MO-0bc">
+                                <rect key="frame" x="16" y="94" width="288" height="425"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="Ky3-ip-Max"/>
+                                    <constraint firstAttribute="height" constant="425" id="X5S-6c-GHH"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="home" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6E-6P-2Tb" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="26" y="112" width="111" height="57"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="kgK-Iz-5MW"/>
+                                    <constraint firstAttribute="width" constant="111" id="nDh-Yy-obr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="away" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jwt-i8-Fny" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="182" y="112" width="111" height="57"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Ux6-6u-1Mm"/>
+                                    <constraint firstAttribute="width" constant="111" id="dBc-de-h04"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="championship" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVS-RE-zTC" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="71" y="190" width="176" height="30"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="d6b-VB-nrk"/>
+                                    <constraint firstAttribute="width" constant="176" id="s5M-i9-xli"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii6-gj-DMg" customClass="BoutonFiches" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="145" y="125" width="29" height="36"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="29y-S8-Ibp"/>
+                                    <constraint firstAttribute="width" constant="29" id="ywF-OY-try"/>
+                                </constraints>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="tie odd" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0i-9B-r9H" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="123" y="248" width="73" height="42"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="RSc-Li-BV0"/>
+                                    <constraint firstAttribute="width" constant="73" id="tw6-Df-tty"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="home odd" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsQ-oa-8b1" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="35" y="248" width="73" height="42"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="gl2-BN-a36"/>
+                                    <constraint firstAttribute="width" constant="73" id="o0U-B6-mFl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="wager" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hc5-ab-JYJ" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="35" y="317" width="111" height="57"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="8Zl-K5-fR7"/>
+                                    <constraint firstAttribute="width" constant="111" id="SsE-UQ-cOM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" tag="10" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0S2-5Z-NfN" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="175" y="317" width="111" height="57"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="AQP-3d-kg1"/>
+                                    <constraint firstAttribute="width" constant="111" id="uZH-zG-Ieu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="away odd" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xej-2F-uC2" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="213" y="248" width="73" height="42"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1a3-rl-VEC"/>
+                                    <constraint firstAttribute="width" constant="73" id="XQ3-Iw-LiZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pr-jb-gG4" customClass="BoutonFiches" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="26" y="425" width="111" height="57"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="6Kt-to-eTM"/>
+                                    <constraint firstAttribute="height" constant="57" id="iHO-fA-Gtb"/>
+                                </constraints>
+                                <state key="normal" title="home">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkn-Dt-41D" customClass="BoutonFiches" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="182" y="425" width="111" height="57"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="AQE-2l-saK"/>
+                                    <constraint firstAttribute="height" constant="57" id="oHh-kX-7sT"/>
+                                </constraints>
+                                <state key="normal" title="away">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67Z-F0-oPy" customClass="BoutonFiches" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="145" y="435" width="29" height="36"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Qpn-vK-P5r"/>
+                                    <constraint firstAttribute="width" constant="29" id="px3-9q-3xU"/>
+                                </constraints>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsV-cL-nEP">
+                                <rect key="frame" x="230" y="345.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSn-Dc-JPQ">
+                                <rect key="frame" x="244" y="471" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="jwt-i8-Fny" firstAttribute="leading" secondItem="Ii6-gj-DMg" secondAttribute="trailing" constant="8" id="3QJ-Pv-oDu"/>
+                            <constraint firstItem="g0i-9B-r9H" firstAttribute="top" secondItem="sVS-RE-zTC" secondAttribute="bottom" constant="28" id="7rn-c6-9BR"/>
+                            <constraint firstItem="nsQ-oa-8b1" firstAttribute="top" secondItem="T6E-6P-2Tb" secondAttribute="bottom" constant="79" id="8ds-kg-qCG"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="top" secondItem="T6E-6P-2Tb" secondAttribute="bottom" constant="-75" id="9Xj-ib-wTC"/>
+                            <constraint firstItem="0S2-5Z-NfN" firstAttribute="leading" secondItem="Hc5-ab-JYJ" secondAttribute="trailing" constant="29" id="BgU-K5-kEf"/>
+                            <constraint firstItem="AsV-cL-nEP" firstAttribute="centerY" secondItem="0S2-5Z-NfN" secondAttribute="centerY" id="EUY-nC-wSp"/>
+                            <constraint firstItem="xej-2F-uC2" firstAttribute="top" secondItem="jwt-i8-Fny" secondAttribute="bottom" constant="79" id="HFf-vJ-OOk"/>
+                            <constraint firstItem="g0i-9B-r9H" firstAttribute="leading" secondItem="nsQ-oa-8b1" secondAttribute="trailing" constant="15" id="IBE-mF-eEm"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="top" secondItem="Ii6-gj-DMg" secondAttribute="bottom" constant="-67" id="J2U-pW-l5a"/>
+                            <constraint firstItem="Ii6-gj-DMg" firstAttribute="leading" secondItem="T6E-6P-2Tb" secondAttribute="trailing" constant="8" id="Kdp-Zg-ffM"/>
+                            <constraint firstItem="4Pr-jb-gG4" firstAttribute="top" secondItem="Hc5-ab-JYJ" secondAttribute="bottom" constant="51" id="KwX-Ar-KBH"/>
+                            <constraint firstItem="0S2-5Z-NfN" firstAttribute="top" secondItem="xej-2F-uC2" secondAttribute="bottom" constant="27" id="QIg-bf-307"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="centerY" secondItem="ZJG-V4-Hv8" secondAttribute="centerY" constant="-9.5" id="QuF-1g-XcH"/>
+                            <constraint firstItem="gkn-Dt-41D" firstAttribute="leading" secondItem="67Z-F0-oPy" secondAttribute="trailing" constant="8" id="Ria-3Z-Yzb"/>
+                            <constraint firstItem="67Z-F0-oPy" firstAttribute="top" secondItem="g0i-9B-r9H" secondAttribute="bottom" constant="145" id="SFx-we-qA6"/>
+                            <constraint firstItem="AsV-cL-nEP" firstAttribute="centerX" secondItem="0S2-5Z-NfN" secondAttribute="centerX" id="V9y-Sf-3x9"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="centerX" secondItem="ZJG-V4-Hv8" secondAttribute="centerX" id="YD6-Ag-MH7"/>
+                            <constraint firstItem="sVS-RE-zTC" firstAttribute="top" secondItem="Ii6-gj-DMg" secondAttribute="bottom" constant="29" id="YzP-L8-Kn5"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="leading" secondItem="Hc5-ab-JYJ" secondAttribute="trailing" constant="-130" id="b7z-mT-Udi"/>
+                            <constraint firstItem="sVS-RE-zTC" firstAttribute="centerX" secondItem="ZJG-V4-Hv8" secondAttribute="centerX" constant="-1" id="bZe-7Y-A4b"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="leading" secondItem="4Pr-jb-gG4" secondAttribute="trailing" constant="-121" id="bb3-hM-I45"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="leading" secondItem="T6E-6P-2Tb" secondAttribute="trailing" constant="-121" id="hCe-v4-v9d"/>
+                            <constraint firstItem="xej-2F-uC2" firstAttribute="leading" secondItem="g0i-9B-r9H" secondAttribute="trailing" constant="17" id="lBD-4W-D6m"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="top" secondItem="jwt-i8-Fny" secondAttribute="bottom" constant="-75" id="lPT-xc-gxw"/>
+                            <constraint firstItem="gkn-Dt-41D" firstAttribute="top" secondItem="0S2-5Z-NfN" secondAttribute="bottom" constant="51" id="oBk-Vc-RrH"/>
+                            <constraint firstItem="67Z-F0-oPy" firstAttribute="leading" secondItem="4Pr-jb-gG4" secondAttribute="trailing" constant="8" id="qJN-Jd-6Xt"/>
+                            <constraint firstItem="Hc5-ab-JYJ" firstAttribute="top" secondItem="nsQ-oa-8b1" secondAttribute="bottom" constant="27" id="tmj-Fn-YCA"/>
+                            <constraint firstItem="O5H-MO-0bc" firstAttribute="leading" secondItem="nsQ-oa-8b1" secondAttribute="trailing" constant="-92" id="vQl-cl-dDS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZJG-V4-Hv8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log a game" id="02l-ZD-EWI">
+                        <barButtonItem key="backBarButtonItem" title="Edit" id="vlG-dS-ktU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Yfv-9B-PP8">
+                            <connections>
+                                <segue destination="rPc-gf-ZzZ" kind="show" identifier="logToFiche" id="5vN-aM-of4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="boutonNul" destination="Ii6-gj-DMg" id="aVc-PA-trZ"/>
+                        <outlet property="boutonWinAway" destination="gkn-Dt-41D" id="GTQ-6a-DdE"/>
+                        <outlet property="boutonWinHome" destination="4Pr-jb-gG4" id="SUn-vX-qQ7"/>
+                        <outlet property="boutonWinNul" destination="67Z-F0-oPy" id="MyC-4x-bDy"/>
+                        <outlet property="fieldAwayTeam" destination="jwt-i8-Fny" id="F3A-IF-9fy"/>
+                        <outlet property="fieldCompetition" destination="sVS-RE-zTC" id="vFL-4A-1Ve"/>
+                        <outlet property="fieldCoteDom" destination="nsQ-oa-8b1" id="UEl-Dl-Rq9"/>
+                        <outlet property="fieldCoteExt" destination="xej-2F-uC2" id="xdG-17-Ffr"/>
+                        <outlet property="fieldCoteNul" destination="g0i-9B-r9H" id="6yi-3i-rP4"/>
+                        <outlet property="fieldHomeTeam" destination="T6E-6P-2Tb" id="s9C-5N-VsD"/>
+                        <outlet property="fieldMise" destination="Hc5-ab-JYJ" id="hhL-oX-xjR"/>
+                        <outlet property="potentialWin" destination="AsV-cL-nEP" id="oim-0d-iZ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXS-GP-KeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="25"/>
+        </scene>
+        <!--Your bet-->
+        <scene sceneID="CRm-Jq-P7d">
+            <objects>
+                <viewController storyboardIdentifier="FicheMatch" id="rPc-gf-ZzZ" customClass="ficheMatchViewController" customModule="Pronobo_the_real_shit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RV4-gj-HZH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ficheVerte" translatesAutoresizingMaskIntoConstraints="NO" id="hA8-Ex-DeV">
+                                <rect key="frame" x="16" y="94" width="288" height="425"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="425" id="1vC-ce-zzX"/>
+                                    <constraint firstAttribute="width" constant="288" id="WiY-iG-Dxs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-JH-V9t" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="26" y="112" width="111" height="57"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="lvz-2I-gUJ"/>
+                                    <constraint firstAttribute="width" constant="111" id="vbC-vr-RX9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx6-aW-0Pm" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="182" y="112" width="111" height="57"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="XCZ-ha-mgw"/>
+                                    <constraint firstAttribute="width" constant="111" id="i8u-lL-SHF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsE-IY-FcU" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="145" y="125" width="29" height="36"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1q0-tK-eC3"/>
+                                    <constraint firstAttribute="width" constant="29" id="mME-I5-KHx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAM-Lx-ZQ8" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="72" y="190" width="176" height="30"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="V7u-wL-e42"/>
+                                    <constraint firstAttribute="height" constant="30" id="frA-ik-UJm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv1-D6-g1I" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="35" y="248" width="73" height="42"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Af1-aL-gd2"/>
+                                    <constraint firstAttribute="width" constant="73" id="Qme-gh-dHC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNn-i2-HYo" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="124" y="248" width="73" height="42"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="10v-5K-Bvp"/>
+                                    <constraint firstAttribute="width" constant="73" id="NSb-Ob-5XO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-yr-NNt" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="214" y="248" width="73" height="42"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="c1o-Is-VLX"/>
+                                    <constraint firstAttribute="height" constant="42" id="ede-Cg-9Im"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="commentaires" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-lP-Rb0" customClass="TextFieldFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="152.5" y="309.5" width="135" height="54"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="G5q-jf-cQf"/>
+                                    <constraint firstAttribute="width" constant="135" id="dia-pp-BdJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f69-fY-RNi" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="34.5" y="309.5" width="99" height="54"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="2gG-v4-h0u"/>
+                                    <constraint firstAttribute="width" constant="99" id="ZLn-YW-xuH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-5O-MWa" customClass="LabelFiche" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                <rect key="frame" x="73.5" y="413.5" width="172" height="64"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Vhw-38-kft"/>
+                                    <constraint firstAttribute="width" constant="172" id="kxj-8Z-Id4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rek-lP-Rb0" firstAttribute="top" secondItem="SzS-yr-NNt" secondAttribute="bottom" constant="19.5" id="76K-Hs-X0E"/>
+                            <constraint firstItem="sx6-aW-0Pm" firstAttribute="leading" secondItem="gNQ-JH-V9t" secondAttribute="trailing" constant="45" id="APs-es-PwC"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="leading" secondItem="f69-fY-RNi" secondAttribute="trailing" constant="-117.5" id="CgY-Vo-QkQ"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="centerX" secondItem="N7A-NK-hWS" secondAttribute="centerX" id="Dtj-PY-bqo"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="top" secondItem="MsE-IY-FcU" secondAttribute="bottom" constant="-67" id="EUo-UL-g0B"/>
+                            <constraint firstItem="MsE-IY-FcU" firstAttribute="leading" secondItem="gNQ-JH-V9t" secondAttribute="trailing" constant="8" id="FWc-tS-mXc"/>
+                            <constraint firstItem="SzS-yr-NNt" firstAttribute="leading" secondItem="SNn-i2-HYo" secondAttribute="trailing" constant="17" id="Ir0-ve-bE8"/>
+                            <constraint firstItem="f69-fY-RNi" firstAttribute="top" secondItem="Rv1-D6-g1I" secondAttribute="bottom" constant="19.5" id="Jsi-fX-Vos"/>
+                            <constraint firstItem="SzS-yr-NNt" firstAttribute="top" secondItem="vAM-Lx-ZQ8" secondAttribute="bottom" constant="28" id="KEq-qd-QBb"/>
+                            <constraint firstItem="sx6-aW-0Pm" firstAttribute="leading" secondItem="MsE-IY-FcU" secondAttribute="trailing" constant="8" id="KMJ-MV-o33"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="leading" secondItem="gNQ-JH-V9t" secondAttribute="trailing" constant="-121" id="KUQ-vb-J0s"/>
+                            <constraint firstItem="SNn-i2-HYo" firstAttribute="leading" secondItem="Rv1-D6-g1I" secondAttribute="trailing" constant="16" id="PHj-ob-rtp"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="leading" secondItem="Rv1-D6-g1I" secondAttribute="trailing" constant="-92" id="Pbs-uw-Mxe"/>
+                            <constraint firstItem="vAM-Lx-ZQ8" firstAttribute="centerX" secondItem="N7A-NK-hWS" secondAttribute="centerX" id="ZKj-Lh-aJu"/>
+                            <constraint firstItem="Rek-lP-Rb0" firstAttribute="leading" secondItem="hA8-Ex-DeV" secondAttribute="trailing" constant="-151.5" id="ZkO-8m-PUs"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="top" secondItem="gNQ-JH-V9t" secondAttribute="bottom" constant="-75" id="dbM-EY-pO0"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="leading" secondItem="aCH-5O-MWa" secondAttribute="trailing" constant="-229.5" id="kZK-LF-mes"/>
+                            <constraint firstItem="SNn-i2-HYo" firstAttribute="top" secondItem="vAM-Lx-ZQ8" secondAttribute="bottom" constant="28" id="o1b-yG-wCc"/>
+                            <constraint firstItem="Rv1-D6-g1I" firstAttribute="top" secondItem="vAM-Lx-ZQ8" secondAttribute="bottom" constant="28" id="ouu-ZQ-YMr"/>
+                            <constraint firstItem="aCH-5O-MWa" firstAttribute="top" secondItem="Rek-lP-Rb0" secondAttribute="bottom" constant="50" id="rv4-2D-UCQ"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="centerY" secondItem="N7A-NK-hWS" secondAttribute="centerY" constant="-9.5" id="uYo-H1-ck2"/>
+                            <constraint firstItem="hA8-Ex-DeV" firstAttribute="top" secondItem="sx6-aW-0Pm" secondAttribute="bottom" constant="-75" id="vYv-e4-Cqy"/>
+                            <constraint firstItem="vAM-Lx-ZQ8" firstAttribute="top" secondItem="MsE-IY-FcU" secondAttribute="bottom" constant="29" id="wfb-LN-prl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N7A-NK-hWS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your bet" id="Y2M-50-fml">
+                        <barButtonItem key="backBarButtonItem" title="Edit" id="lFC-Mm-GH7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Yqe-QO-cY8">
+                            <connections>
+                                <segue destination="2wM-a2-Uc8" kind="presentation" identifier="ficheToHisto" id="gOL-sV-Ujy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="championnat" destination="vAM-Lx-ZQ8" id="jhj-BA-wbV"/>
+                        <outlet property="coteAway" destination="SzS-yr-NNt" id="FsU-ZP-tZq"/>
+                        <outlet property="coteDom" destination="Rv1-D6-g1I" id="For-QR-dLb"/>
+                        <outlet property="coteNul" destination="SNn-i2-HYo" id="I3N-To-sMs"/>
+                        <outlet property="fiche" destination="hA8-Ex-DeV" id="Ctr-w1-x3K"/>
+                        <outlet property="fieldCommentaires" destination="Rek-lP-Rb0" id="Zre-ji-w8Y"/>
+                        <outlet property="gain" destination="aCH-5O-MWa" id="nnR-fw-g1K"/>
+                        <outlet property="labelNul" destination="MsE-IY-FcU" id="KFQ-26-6TN"/>
+                        <outlet property="mise" destination="f69-fY-RNi" id="1iN-BD-gYq"/>
+                        <outlet property="nomAway" destination="sx6-aW-0Pm" id="2f1-kI-rG1"/>
+                        <outlet property="nomHome" destination="gNQ-JH-V9t" id="Xah-NH-wdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QP3-kK-XAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="22.938530734632685"/>
+        </scene>
+        <!--Histo View Controller-->
+        <scene sceneID="QiY-Xd-MPh">
+            <objects>
+                <viewController id="2wM-a2-Uc8" customClass="HistoViewController" customModule="Pronobo_the_real_shit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ydt-Hf-DTQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XAk-La-aCP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMatch" rowHeight="81" id="nLu-B3-31U" customClass="CellHistoTableViewCell" customModule="Pronobo_the_real_shit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nLu-B3-31U" id="Nrw-Ux-E4n">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FramehistoVert" translatesAutoresizingMaskIntoConstraints="NO" id="gfb-7d-OUy">
+                                                    <rect key="frame" x="12" y="0.0" width="296" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11/07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeB-1u-uv7">
+                                                    <rect key="frame" x="23" y="28" width="37" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ 23$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuk-hc-wg7">
+                                                    <rect key="frame" x="257" y="28" width="41" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paris x Guingamp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcK-Zi-kGs">
+                                                    <rect key="frame" x="74" y="25" width="175" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="21"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="yeB-1u-uv7" id="ybn-PQ-ffb"/>
+                                            <outlet property="gainLabel" destination="Iuk-hc-wg7" id="bf6-aD-9ij"/>
+                                            <outlet property="imageFond" destination="gfb-7d-OUy" id="dC6-xQ-ifM"/>
+                                            <outlet property="nomLabel" destination="vcK-Zi-kGs" id="iop-Li-Qwf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XAk-La-aCP" firstAttribute="top" secondItem="Zfc-vn-Jdg" secondAttribute="top" constant="44" id="3t4-ro-v3d"/>
+                            <constraint firstItem="XAk-La-aCP" firstAttribute="leading" secondItem="Zfc-vn-Jdg" secondAttribute="leading" id="avD-Yw-XwA"/>
+                            <constraint firstItem="Zfc-vn-Jdg" firstAttribute="bottom" secondItem="XAk-La-aCP" secondAttribute="bottom" id="fiy-eB-saY"/>
+                            <constraint firstItem="Zfc-vn-Jdg" firstAttribute="trailing" secondItem="XAk-La-aCP" secondAttribute="trailing" id="hqL-c1-b7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zfc-vn-Jdg"/>
+                    </view>
+                    <connections>
+                        <outlet property="histoTableView" destination="XAk-La-aCP" id="7ti-n0-F7H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMa-XV-GXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3138.75" y="16.901408450704224"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="t3N-nS-zwC">
+            <objects>
+                <viewController id="7CU-ms-v4v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hVm-Qd-XkA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ogK-kL-ezu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3C9-TF-TBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3864" y="26"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T1j-DI-fBJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z05-vl-4Sb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oLj-Gu-lTe">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1tq-G4-0DR" kind="relationship" relationship="rootViewController" id="XVt-Ra-LIe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5u-RU-y4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="-1048"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FramehistoVert" width="375" height="84"/>
+        <image name="RectangleAcceuil" width="368" height="111"/>
+        <image name="ficheJaune" width="344" height="449"/>
+        <image name="ficheVerte" width="344" height="466"/>
+    </resources>
+</document>
